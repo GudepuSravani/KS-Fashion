@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    background-color: #FDFBF7;
+    color: #2C1D15;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F4EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D6C09C;
+  border-radius: 9999px;
+  border: 2px solid #F8F4EE;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
+
+/* Gold foil gradient effect */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B08B42 0%, #D4AF37 35%, #F3E5AB 50%, #C5A059 70%, #997A2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #D4AF37 0%, #E5C365 50%, #C5A059 100%);
+}
+
+.rose-gold-gradient-bg {
+  background: linear-gradient(135deg, #E8A598 0%, #F5DCDA 50%, #D98982 100%);
+}
+
+.champagne-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF6EE 100%);
+  border: 1px solid rgba(214, 192, 156, 0.28);
+}
+
+.champagne-card:hover {
+  border-color: rgba(197, 160, 89, 0.6);
+  box-shadow: 0 15px 35px -10px rgba(197, 160, 89, 0.2);
+}
+
+.luxury-glass {
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(214, 192, 156, 0.35);
+}
+
+/* Subtle shimmer animation for premium badge */
+.shimmer-badge {
+  background: linear-gradient(90deg, #F5EFEB 0%, #FFFFFF 50%, #F5EFEB 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Soft gold glow button */
+.btn-gold-glow {
+  box-shadow: 0 4px 18px rgba(197, 160, 89, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-gold-glow:hover {
+  box-shadow: 0 6px 24px rgba(197, 160, 89, 0.55);
+  transform: translateY(-1px);
+}
+
+/* Prevent accidental text and image selection highlighting on cards & buttons */
+.select-none,
+button,
+[role="button"],
+.group {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Elegant soft gold highlight if text is selected elsewhere */
+::selection {
+  background-color: rgba(212, 175, 55, 0.22);
+  color: inherit;
+}
+
